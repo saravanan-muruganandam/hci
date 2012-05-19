@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @node.name %>
+</p>
+
+<p>
+  <b>X:</b>
+  <%= @node.x %>
+</p>
+
+<p>
+  <b>Y:</b>
+  <%= @node.y %>
+</p>
+
+<p>
+  <b>Mark:</b>
+  <%= @node.mark_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_node_path(@node) %> |
+<%= link_to 'Back', nodes_path %> |
+<%= link_to 'Nodes', map_nodes_path(@map) %>
