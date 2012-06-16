@@ -1,0 +1,36 @@
+<h1>Listing directions</h1>
+<%= link_to 'recalculate all directions', '/calculate' %>
+
+<table class="stripped table">
+  <tr>
+    <th>From</th>
+    <th>To</th>
+    <th>Next</th>
+    <th>Distance</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @directions.each do |direction| %>
+  <% @from_node = Node.find(direction.from_id) %>
+  <% @to_node = Node.find(direction.to_id) %>
+  <tr>
+    <td><%= @from_node.name %>(Mark:<%= @from_node.mark_id %>)</td>
+    <td><%= @to_node.name %></td>
+    <td><% if !direction.next_id.nil? %>
+          <%= Node.find(direction.next_id).name %>
+        <% end %>
+    </td>
+    <td> <%= direction.distance %></td>
+    <td><%= link_to 'Show', direction %></td>
+    <td><%= link_to 'Edit', edit_direction_path(direction) %></td>
+    <td><%= link_to 'Destroy', direction, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Direction', new_direction_path %> |
+<%= link_to 'Back to Maps', '/maps' %>

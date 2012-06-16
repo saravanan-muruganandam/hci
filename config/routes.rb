@@ -1,11 +1,19 @@
 Hci::Application.routes.draw do
-  resources :marks
+  resources :directions
+  match "/calculate" => "directions#calculate"
+  match "/directions/from/:from/to/:to" => "directions#from_to"
+
+  match "/maps/:id/edit_map" => "maps#edit_map"
+  match "/maps/:id/changesize" => "maps#changesize"
 
   resources :maps do
     resources :nodes
+    resources :lines
   end
 
   resources :nodes
+  resources :lines
+  resources :marks
 
   root :to => 'maps#index'
   match '/post', to: 'marks#post'

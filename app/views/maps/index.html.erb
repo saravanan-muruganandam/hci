@@ -5,7 +5,8 @@
     <th>Name</th>
     <th>Height</th>
     <th>Width</th>
-    <th>Path</th>
+    <th>Image Path</th>
+    <th></th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,7 +19,8 @@
     <td><%= map.height %></td>
     <td><%= map.width %></td>
     <td><%= map.path %></td>
-    <td><%= link_to 'Editor', '#' %></td>
+    <td><a href='http://192.168.1.33:80/canvas/pull.html?id=<%= map.id %>'> Editor </a> </td>
+    <td> <a href='http://192.168.1.33:80/canvas/map.html?id=<%= map.id %>'> Change Size </a> </td>
     <td><%= link_to 'Show', map %></td>
     <td><%= link_to 'Edit', edit_map_path(map) %></td>
     <td><%= link_to 'Destroy', map, confirm: 'Are you sure?', method: :delete %></td>
@@ -28,4 +30,5 @@
 
 <br />
 
-<%= link_to 'New Map', new_map_path %>
+<%= link_to 'New Map', new_map_path %> |
+<%= link_to 'Directions', '/directions' %>

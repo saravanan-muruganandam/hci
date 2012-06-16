@@ -16,11 +16,12 @@
 </p>
 
 <p>
-  <b>Path:</b>
+  <b>Image Path:</b>
   <%= @map.path %>
 </p>
 
 
 <%= link_to 'Edit', edit_map_path(@map) %> |
 <%= link_to 'Back', maps_path %> |
-<%= link_to 'Nodes', map_nodes_path(@map) %>
+<%= link_to 'Nodes', map_nodes_path(@map) %> |
+<%= link_to 'Paths', map_lines_path(@map) %>

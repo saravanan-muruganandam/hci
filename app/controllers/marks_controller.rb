@@ -40,7 +40,8 @@ class MarksController < ApplicationController
   # POST /marks
   # POST /marks.json
   def create
-    @mark = Mark.new(params[:mark])
+    #@mark = Mark.new(params[:mark])
+    @mark = Mark.new(code:params[:code])
 
     respond_to do |format|
       if @mark.save
@@ -80,4 +81,5 @@ class MarksController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 end

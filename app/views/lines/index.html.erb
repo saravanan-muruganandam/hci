@@ -1,0 +1,34 @@
+<% if !@map.nil? %>
+  <h1>Listing Paths Of Map <%= @map.name %></h1>
+<% else %>
+  <h1> Listing Paths </h1>
+<% end %>
+
+<table class="table table-striped">
+  <tr>
+    <th>Start node</th>
+    <th>End node</th>
+    <th> Cost </th>
+    <th> Orientation </th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @lines.each do |line| %>
+  <tr>
+    <td><%= line.start.name %></td>
+    <td><%= line.end.name%></td>
+    <td><%= line.cost %></td>
+    <td><%= line.orientation %></td>
+    <td><%= link_to 'Show', line %></td>
+    <td><%= link_to 'Edit', edit_line_path(line) %></td>
+    <td><%= link_to 'Destroy', line, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Path', new_map_line_path() %> |
+<%= link_to 'Back to Map', map_path(@map) %>

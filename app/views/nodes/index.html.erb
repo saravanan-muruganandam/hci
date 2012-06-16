@@ -2,6 +2,7 @@
 
 <table class="table table-striped">
   <tr>
+    <th> ID </th>
     <th>Name</th>
     <th>X</th>
     <th>Y</th>
@@ -13,6 +14,7 @@
 
 <% @nodes.each do |node| %>
   <tr>
+    <td> <%= node.id %> </td>
     <td><%= node.name %></td>
     <td><%= node.x %></td>
     <td><%= node.y %></td>
@@ -26,5 +28,9 @@
 
 <br />
 
-<%= link_to 'New Node', new_map_node_path(@map) %> |
-<%= link_to 'Back to Map', map_path(@map) %>
+<% if !@map.nil? %>
+  <%= link_to 'New Node', new_map_node_path(@map) %> |
+  <%= link_to 'Back to Map', map_path(@map) %>
+<% else %>
+  <%= link_to 'New Node', new_node_path() %>
+<% end %>

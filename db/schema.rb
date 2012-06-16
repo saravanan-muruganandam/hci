@@ -11,7 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120519134226) do
+ActiveRecord::Schema.define(:version => 20120616072204) do
+
+  create_table "directions", :force => true do |t|
+    t.integer  "from_id"
+    t.integer  "to_id"
+    t.integer  "next_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.float    "distance"
+    t.integer  "orientation"
+  end
+
+  create_table "lines", :force => true do |t|
+    t.integer  "start_id"
+    t.integer  "end_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "map_id"
+    t.float    "cost"
+    t.integer  "orientation"
+  end
 
   create_table "maps", :force => true do |t|
     t.string   "name"

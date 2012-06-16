@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>From:</b>
+  Node <%= @direction.from_id %>
+</p>
+
+<p>
+  <b>To:</b>
+  Node <%= @direction.to_id %>
+</p>
+
+<p>
+  <b>Next:</b>
+  Node <%= @direction.next_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_direction_path(@direction) %> |
+<%= link_to 'Back', directions_path %>

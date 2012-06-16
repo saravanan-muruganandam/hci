@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Start Node id:</b>
+  <%= @line.start_id %>
+</p>
+
+<p>
+  <b>End Node id:</b>
+  <%= @line.end_id %>
+</p>
+
+<p>
+  <b> Cost:</b>
+  <%= @line.cost %>
+</p>
+<p>
+  <b> Orientation: </b>
+  <%= @line.orientation %>
+</p>
+<%= link_to 'Edit', edit_line_path(@line) %> |
+<%= link_to 'Back', lines_path %>

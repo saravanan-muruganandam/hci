@@ -3,15 +3,25 @@
 <title> post to mark </title>
 
 <body>
-	<form action="http://localhost:3000/marks" method="post">
+	<form action="http://localhost:3000/maps/1/lines.json" method="post">
 		<div class="field">
-			<label for="mark_code"> Code </label>
+			<label for="node_type"> Type </label>
 			<br>
-			<input id="mark_code" name="mark[code]" size="30" type="text">
+			<input id="node_type" name="type" size="30" type="text">
+		</div>
+		<div class="field">
+			<label for="start_id">Start Node id </label>
+			<br>
+			<input id="start_id" name="start_id" size="30" type="text">
+		</div>
+		<div class="field">
+			<label for="end_id"> Name </label>
+			<br>
+			<input id="end_id" name="end_id" size="30" type="text">
 		</div>
 
 		<div class="actions">
-			<input name="commit" type="submit" value="Create Makr">
+			<input name="commit" type="submit" value="Create Node">
 		</div>
 	</form>
 </body>
