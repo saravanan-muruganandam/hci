@@ -59,7 +59,7 @@ var c_name_temp = "";
 var lid_temp = -1;
 var img_url = "";
 //var server_host = "59.78.23.109:3000";
-var server_host = "192.168.1.25:3000";
+var server_host = "localhost:3000";
 
 var cycle_time = 1;
 var retry_time = 0;

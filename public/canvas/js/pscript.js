@@ -58,7 +58,7 @@ var cid_temp = -1;
 var c_name_temp = "";
 var lid_temp = -1;
 var img_url = "";
-var server_host = "192.168.1.25:3000";
+var server_host = "localhost:3000";
 //var server_host = "192.168.1.25:3000";
 
 var cycle_time = 1;
@@ -420,6 +420,8 @@ function localLine(l_id,l_start_c,l_end_c){
 
 function mapInfoGet(map_id){
 	var state = false;
+	console.log("http://"+server_host+"/maps/"+map_id+".json");
+	alert("http://"+server_host+"/maps/"+map_id+".json");
 	$.ajax({
 		async:false,
 		type: "GET",
@@ -441,12 +443,15 @@ function mapInfoGet(map_id){
 		},
 		complete: function(XMLHttpRequest, textStatus){
 			//HideLoading();
+			console.log(XMLHttpRequest);
+			console.log(textStatus);
 		},
 		error: function(jqXHR, textStatus, errorThrown){
-			console.log(jqXHR);
-			console.log(textStatus);
-			console.log(errorThrown);
-			alert("map info ajax error");
+		//	console.log(jqXHR);
+		//	console.log(textStatus);
+		//	console.log(errorThrown);
+			alert("test map info ajax error");
+			alert("http://"+server_host+"/maps/"+map_id+".json");
 		}
 	});
 	
