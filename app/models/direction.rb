@@ -27,6 +27,7 @@ class Direction < ActiveRecord::Base
 
         if i.eql? j
           direction.distance = 0
+          direction.orientation = -1
         else
           p = Line.query nodes[i].id, nodes[j].id
           
