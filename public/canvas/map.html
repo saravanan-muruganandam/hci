@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8" />
+        <link href="css/main.css" rel="stylesheet" type="text/css" />
+
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		  <script type="text/javascript" src="js/jquery-1.5.2.min.js"></script>
+        <![endif]-->
+
+		<link type="text/css" href="css/custom-theme/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+		<link type="text/css" href="css/bootstrap.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>        
+        <script type="text/javascript" src="js/map_script.js"></script>
+		
+		
+		
+    </head>
+    <body>
+	    <!--<div id="head"><a href="http://192.168.1.25:3000/maps"><h1>A head will be added here</h1></a></div>-->
+		
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a href="http://192.168.1.25:3000/maps" style="color:white"><h1>MAPS</h1></a>
+			</div>
+		</div>
+		
+		<div align="right" style="float:right;">
+			<canvas id="scene" width="800" height="400" ></canvas>            			
+        </div>
+
+        <div align="left" >        
+			<button id="bigger" class="tool" onClick="bigger()";>bigger</button>
+			<button id="smaller" class="tool" onClick="smaller();">smaller</button>
+			<button id="update" class="tool" onClick="update();">update</button>
+			<div align="left" id="displays" style="margin-left:10px;margin-right:10px;overflow:auto;word-break:break-all">
+			<br /><br /><b>NOTICE</b><br /><br />
+			
+			The bigger button will enlarge the size of the map img.<br /><br />
+			
+			The smaller button will make the size of map smaller.<br /><br />
+			
+			Do not click the update button before you think the size is ok.<br /><br />
+			
+			The map's size won't be changed until you click the update button.<br /><br />
+			</div>
+		</div>
+</body>
+</html>

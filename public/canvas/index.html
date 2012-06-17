@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8" />
+        <link href="css/main.css" rel="stylesheet" type="text/css" />
+
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		  <script type="text/javascript" src="js/jquery-1.5.2.min.js"></script>
+        <![endif]-->
+		
+		<link type="text/css" href="css/custom-theme/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+		<link type="text/css" href="css/bootstrap.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>        
+        <script type="text/javascript" src="js/script.js"></script>
+		
+		
+		
+    </head>
+    <body>
+	    
+		<div align="right" style="float:left;">
+			<canvas id="scene" width="800" height="400" ></canvas>            			
+        </div>
+		
+		
+        
+        <div align="left" >
+            <button id="newCircle"  class="tool" onClick="newCircle()">newCircle</button>
+            <button id="moveCircle" class="tool" onClick="setMove()">moveCircle</button>
+			<button id="movePic" class="tool" onClick="setPic()">movePic</button>
+            <button id="conn" class="tool" onClick="setConn()">Connect</button>
+            <button id="del" class="tool" onClick="setDel()">Delete</button>
+			<button id="zoomIn" class="tool" onClick="zoomIn()">zoonIn</button>
+			<button id="zoomOut" class="tool" onClick="zoomOut()">zoomOut</button>
+			<button id="infoEdit" class="tool" onClick="setInfoEdit()">infoEdit</button>
+			<button id="bigger" class="tool" onClick="bigger()";>bigger</button>
+			<button id="smaller" class="tool" onClick="smaller();">smaller</button>
+        </div>
+        
+		<div id="display" align="left"></div>
+		
+		<div id="circle_dialog" title="Circles">
+		<p><b>circle name</b> <input id="circle_name" type="text"></p>
+		<br />
+		<p><b>link group : </b><b id="link_group">null</b></p>
+		<p><b>link floor : </b><b id="link_floor">null</b></p>
+		<p><b>mark id : </b><b id="mark_id">null</b></p>
+		<div align="right"><button id="mark_apply" onclick="markApply();">markApply</button> <button id="cir_dia_btn">confirm</button></div>
+		</div>
+		
+		<div id="path_dialog" title="Paths">
+		<p><b>Start circle: </b><b id="start_circle"></b></p>
+		<br />
+		<p><b>End circle: </b><b id="end_circle"></b></p>
+		<br />
+		<p><b>direction : </b><b id="path_direction">a to b</b></p>
+		</div>
+        
+</body>
+</html>
